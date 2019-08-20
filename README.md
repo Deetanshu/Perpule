@@ -29,7 +29,10 @@ python Assignment_run.py -c <PATH_TO_CATALOG> -x <PATH_TO_HISTORICAL_DATA> -i <P
 Use ```--help``` to see the arguments if there are any doubts.
 
 ### Running Assignment.ipynb
+
 In a console window at the same directory, run ```jupyter notebook Assignment.ipynb```
+Note that the kernel used should be one that has the above prerequisites satisfied.
+
 ## What does the program do?
 
 The program goes through the following steps:
