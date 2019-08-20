@@ -58,7 +58,11 @@ This is done by:
 This is done by predicting the ratio of number of products to the number of transactions.
 * The data is first converted into the required format ( a ```numpy``` array).
 * The averages and standard deviation of the quantity of products sold in a month and the ratio are computed. This is used to determine the upper limit in the event that the accuracy of the prediction is wildly off.
+
+
 ![equation](https://latex.codecogs.com/gif.latex?L_u_p_p_e_r%20%3D%20%5Cmu_q%20&plus;%202%5Ctimes%20%5Csigma_q)
+
+
 * A linear feature is computed and fed into a linear regression model using ```scikit-learn```. 
 * A 6 month cumulative total is taken and returned.
 * The number of days that the current inventory will last is also computed by obtaining the quantity sold per day and then dividing.
