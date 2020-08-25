@@ -1,6 +1,6 @@
-# Perpule Assignment
+# Perpule Inventory Analysis
 
-This assignment pertains to the managing of inventory levels. There are two files, Assignment_run.py and Assignment.ipynb. Assignment.ipynb is to see the process and working of the assignment while the former executes the task in its entirety. 
+This Analysis pertains to the managing of inventory levels. There are two files, Analysis.py and Analysis.ipynb. Analysis.ipynb is to see the process and working of the analysis while the former executes the task in its entirety. 
 
 ## Getting Started
 
@@ -14,23 +14,23 @@ In order to run these two, a python 3.6 environment with several prerequisites n
 * math
 * argparse
 
-### Running Assignment_run.py
+### Running Analysis.py
 
-Run Assignment_run.py in the following way if the data files are in the same directory:
+Run Analysis.py in the following way if the data files are in the same directory:
 
 ```
-python Assignment_run.py
+python Analysis.py
 ```
 in the console.
 In the event that the data files are located in different directories, make use of arguments to show the path.
 ```
-python Assignment_run.py -c <PATH_TO_CATALOG> -x <PATH_TO_HISTORICAL_DATA> -i <PATH_TO_CURRENT_INVENTORY>
+python Analysis.py -c <PATH_TO_CATALOG> -x <PATH_TO_HISTORICAL_DATA> -i <PATH_TO_CURRENT_INVENTORY>
 ```
 Use ```--help``` to see the arguments if there are any doubts.
 
-### Running Assignment.ipynb
+### Running Analysis.ipynb
 
-In a console window at the same directory, run ```jupyter notebook Assignment.ipynb```
+In a console window at the same directory, run ```jupyter notebook Analysis.ipynb```
 Note that the kernel used should be one that has the above prerequisites satisfied.
 
 ## What does the program do?
@@ -41,9 +41,7 @@ The program goes through the following steps:
 3. Filter out all data that isn't relevant.
 4. Iterate through the products and predict the number of products likely to be moved.
 5. Organize data in the format that is requested.
-6. Compute answer to Question 2.
-7. Save data in the form of a CSV (output.csv)
-8. Print answer to Question 2.
+6. Save data in the form of a CSV (output.csv)
 
 ### Loading and obtaining "required information"
 
@@ -63,7 +61,7 @@ This is done by predicting the ratio of number of products to the number of tran
 * The averages and standard deviation of the quantity of products sold in a month and the ratio are computed. This is used to determine the upper limit in the event that the accuracy of the prediction is wildly off.
 
 
-![equation](https://latex.codecogs.com/gif.latex?L_u_p_p_e_r%20%3D%20%5Cmu_q%20&plus;%202%5Ctimes%20%5Csigma_q)
+![equation](https://latex.codecogs.com/gif.latex?L_{upper}%20%3D%20%5Cmu_q%20&plus;%202%5Ctimes%20%5Csigma_q)
 
 
 * A linear feature is computed and fed into a linear regression model using ```scikit-learn```. 
